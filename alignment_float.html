@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment | Float</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+    }
+    .clr {
+      clear: both;
+    }
+    .box {
+      background: #f4f4f4;
+      border: 1px solid #333;
+      margin-bottom: 10px;
+      padding: 15px;
+    }
+    .box p {
+      text-align: center;
+      text-align: left;
+      text-align: right;
+      text-align: justify;
+    }
+    #box-2 {
+      float: left;
+      width: 50%;
+    }
+    #box-3 {
+      float: right;
+      width: 48%;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div id="box-1" class="box">
+        <h2>Heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque
+          quasi vel ut libero maxime, magni dignissimos repellendus suscipit
+          voluptatum corporis soluta in sit? Totam et, nihil, laudantium fuga
+          ullam hic sit aut reprehenderit repudiandae labore architecto sunt
+          eveniet ducimus dolore? Atque velit veritatis quidem possimus natus
+          numquam dolore a!
+        </p>
+      </div>
+      <div id="box-2" class="box">
+        <h2>Heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium
+          eum inventore quam obcaecati ut, animi sunt veritatis vitae
+          consectetur quos perspiciatis sapiente et eos nisi ratione accusamus
+          quibusdam nesciunt libero?
+        </p>
+      </div>
+      <div id="box-3" class="box">
+        <h2>Heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, nemo
+          odio! Maxime earum consequuntur debitis adipisci! Molestias molestiae
+          quod quibusdam sapiente iste nobis non in assumenda id saepe,
+          reprehenderit ab.
+        </p>
+      </div>
+      <div class="clr"></div>
+      <div id="box-4" class="box">
+        <h2>Heading</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
+          nobis veritatis nihil aliquid architecto eius, omnis consequuntur eos.
+          Animi porro cum sapiente impedit quas veritatis dicta expedita laborum
+          quasi sit.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
