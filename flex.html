@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+  </head>
+  <style>
+    .items {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .item {
+      background: #333;
+      color: white;
+      margin: 0.25rem;
+      padding: 0.25rem;
+      flex: 1;
+    }
+    .item:last-child {
+      flex: 3;
+    }
+    p {
+      /* 
+        Elements Specicifity
+        Lowest priority, applies to HTML elements( h1, p , ul, a, etc...)
+      */
+      background: red;
+    }
+    .paragraph {
+      /* 
+        Classes Specificity
+        Third highest priority, targeted using class names
+      */
+      background: yellow;
+    }
+    #pg {
+      /* 
+        ID Selectors Specificity
+        Second highest priority, identified by the unique id attribute(name) of an element
+      */
+      background: orange;
+    }
+  </style>
+  <body>
+    <ul class="items">
+      <li class="item">item 1</li>
+      <li class="item">item 2</li>
+      <li class="item">item 3</li>
+    </ul>
+
+    <!-- 
+      Inline Style/CSS:
+      Highest priority, directly applied with the style attribute
+    -->
+    <p id="pg" class="paragraph" style="background: purple; color: #fff">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+      animi libero qui ducimus impedit natus ab perspiciatis. Laboriosam, est a.
+    </p>
+  </body>
+</html>
