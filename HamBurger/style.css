@@ -1,0 +1,73 @@
+:root {
+  --primary-color: rgba(104, 143, 56, 0.7);
+  --secondary-color: rgba(24, 145, 98, 0.85);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body Styling */
+body {
+  font-family: "Arial", Sans-serif;
+  line-height: 1.4;
+}
+h1 {
+  font-size: 4rem;
+}
+p {
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  height: 100%;
+  padding: 0 4rem;
+}
+
+/* Page Styling */
+#page {
+  background: var(--primary-color);
+  height: 100vh;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+#page:before {
+  content: "";
+  background: url(/Background.jpg) no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#page .page-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+.btn {
+  background: var(--secondary-color);
+  text-decoration: none;
+  color: inherit;
+  padding: 0.85rem 1.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  transition: opacity 1s ease;
+}
+.btn:hover {
+  opacity: 0.7;
+}
