@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nth-Child</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4;
+        background: #f4f4f4;
+      }
+      .container {
+        max-width: 960px;
+        padding: 4rem;
+      }
+      .container ul li {
+        list-style: none;
+      }
+
+      /* First Element */
+      li:first-child {
+        background: purple;
+        color: #fff;
+      }
+
+      /* Last Element */
+      .container ul li:last-child {
+        background: #333;
+        color: #fff;
+      }
+
+      /* To select each element after 3rd number and starting from 5th position*/
+      .container ul li:nth-child(3n + 5) {
+        background: blue;
+        color: #fff;
+      }
+
+      /* To select element at 10th position */
+      .container ul li:nth-child(10) {
+        background: #44f190;
+      }
+
+      /* To select every odd element */
+      .container ul li:nth-child(odd) {
+        background: #444;
+      }
+
+      /* To select every even element */
+      .container ul li:nth-child(even) {
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+        <li class="item">Item 4</li>
+        <li class="item">Item 5</li>
+        <li class="item">Item 6</li>
+        <li class="item">Item 7</li>
+        <li class="item">Item 8</li>
+        <li class="item">Item 9</li>
+        <li class="item">Item 10</li>
+        <li class="item">Item 11</li>
+        <li class="item">Item 12</li>
+        <li class="item">Item 13</li>
+        <li class="item">Item 14</li>
+        <li class="item">Item 15</li>
+      </ul>
+    </div>
+  </body>
+</html>

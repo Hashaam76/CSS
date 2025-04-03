@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before | After</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #333;
+        color: #fff;
+      }
+      div {
+        padding: 2rem;
+      }
+      div > input {
+        width: 90%;
+        padding: 1rem;
+      }
+      label::after {
+        content: "*";
+        padding: 0.5rem;
+        text-align: center;
+        color: red;
+      }
+      .box {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 2rem;
+        position: relative;
+      }
+      .box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(/stars.jpg) no-repeat center center/cover;
+        height: 100vh;
+        width: 100%;
+        opacity: 0.5;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="name">Name</label>
+      <input type="text" />
+    </div>
+
+    <div class="box">
+      <h1>Heading</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
+        consequuntur perspiciatis sequi fugit id, ipsum magnam temporibus
+        blanditiis qui eveniet.
+      </p>
+    </div>
+    <br />
+    <div class="box2">
+      <h1>Heading</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
+        consequuntur perspiciatis sequi fugit id, ipsum magnam temporibus
+        blanditiis qui eveniet.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance Selectors</title>
+    <style>
+      /* Direct Child */
+      div ul li > p {
+        font-size: 1.5rem;
+      }
+
+      /* Direct After */
+      div + p {
+        background: red;
+        color: #fff;
+      }
+
+      /* To apply only on attribute */
+      a[target] {
+        background: orange;
+      }
+
+      /* Select specific & apply on placeholder attribute */
+      input[type="text"]::placeholder {
+        color: blue;
+      }
+
+      /* Apply on Specific Attribute */
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem cum
+        officia nemo nesciunt illum natus assumenda quibusdam accusantium,
+        voluptas soluta.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quo.
+      </p>
+
+      <ul>
+        <li>Home</li>
+        <li><p>About</p></li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
+      voluptates. Sequi velit deleniti cupiditate iste error! Impedit, eaque
+      iste? Reiciendis omnis neque earum praesentium corrupti doloremque iusto
+      ex harum in.
+    </p>
+
+    <a href="#">Google</a>
+    <a href="#" target="_self">Google</a>
+    <a href="#" target="_blank">Google</a>
+    <br />
+    <br />
+    <label for="name">Name</label>
+    <input type="text" placeholder="Enter Your Name" />
+    <label for="email">Email</label>
+    <input type="email" placeholder="Enter Your Name" />
+    <input type="button" value="Button" />
+  </body>
+</html>

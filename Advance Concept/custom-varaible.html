@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+    <style>
+      /* We use :root to have our all custom variables use in our project.
+        Variables in it access by all property by using var().
+      */
+      :root {
+        --primary-color: #557a5d;
+        --secondary-color: #46ab46;
+        --max-width: 1100px;
+        --flex-width: 3;
+        --flex-width2: 2;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Body Styling */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4;
+        background: var(--light-color);
+      }
+      header {
+        background: var(--primary-color);
+        text-align: center;
+        padding: 1rem;
+        /* --primary-color: #ff0000; */
+        color: #fff;
+        border-bottom: 5px solid var(--secondary-color);
+      }
+      section {
+        display: flex;
+        margin: auto;
+        max-width: var(--max-width);
+      }
+      .box {
+        background: var(--primary-color);
+        padding: 1rem;
+        margin: 1rem;
+        color: #fff;
+        border-bottom: 5px solid var(--secondary-color);
+      }
+      .box-1 {
+        flex: var(--flex-width);
+      }
+      .box-2 {
+        flex: var(--flex-width2);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Custom Variables</h1>
+    </header>
+
+    <section>
+      <div class="box box-1">
+        <h1>Heading</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa
+          incidunt aspernatur, suscipit numquam quibusdam omnis cum veniam velit
+          quam, eaque inventore, accusantium quia similique provident voluptates
+          harum perspiciatis deserunt.
+        </p>
+      </div>
+      <div class="box box-2">
+        <h1>Heading</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt et
+          distinctio iure assumenda consequuntur ipsa doloribus voluptates alias
+          aliquid illo enim voluptatibus tempore facilis, cum architecto
+          dignissimos veritatis dicta laudantium.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

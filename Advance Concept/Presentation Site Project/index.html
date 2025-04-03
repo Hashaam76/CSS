@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .slide{
+            padding: auto;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .slide h1
+        {
+            margin-top:30vh ;
+            margin-bottom: 20px;
+            scale: 2;
+
+        }
+        .slide p{
+            margin: 30px 200px;
+            text-align: justify;
+            line-height: 25px;
+            scale: 1.2;
+        }
+        #first-page{
+            background-color:yellow ;
+        }
+        #second-page{
+            background-color: blueviolet;
+            color: aliceblue;
+        }
+        #third-page{
+            background-color: rgb(117, 115, 114);
+            color: blanchedalmond;
+        }
+        #btn{
+            height: 30px;
+            width: 250px;
+            border-radius: 10%;
+            margin: 10px;
+        }
+        
+        a{
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+<div id="first-page" class="slide">
+    <h1> Welcome to First Page</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse magni cupiditate sunt! Accusamus at animi natus similique tempora. Provident id vitae libero minima facilis eligendi harum ipsa deleniti et hic impedit culpa, ullam odio aliquam maiores deserunt blanditiis qui, adipisci nostrum accusamus sapiente esse inventore. Voluptate cumque, quam ad error cum aperiam fuga beatae harum maxime. Ratione repudiandae, non vel repellat maxime sapiente accusantium nemo vero officia! Id, tempora? Iste maiores, eius praesentium assumenda natus repudiandae nulla error odio iusto incidunt adipisci asperiores, similique distinctio architecto dignissimos expedita temporibus, dicta culpa? Deleniti animi magnam vel architecto doloremque suscipit, deserunt minima voluptatem vero. Minima unde pariatur ut. Reiciendis dicta fugit temporibus nobis beatae impedit incidunt quaerat placeat ab? </p>
+    <button id="btn"> <a href="#second-page">Next Page</a></button>
+</div>
+    <div id="second-page" class="slide">
+        <h1>Welcome to Second Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse magni cupiditate sunt! Accusamus at animi natus similique tempora. Provident id vitae libero minima facilis eligendi harum ipsa deleniti et hic impedit culpa, ullam odio aliquam maiores deserunt blanditiis qui, adipisci nostrum accusamus sapiente esse inventore. Voluptate cumque, quam ad error cum aperiam fuga beatae harum maxime. Ratione repudiandae, non vel repellat maxime sapiente accusantium nemo vero officia! Id, tempora? Iste maiores, eius praesentium assumenda natus repudiandae nulla error odio iusto incidunt adipisci asperiores, similique distinctio architecto dignissimos expedita temporibus, dicta culpa? Deleniti animi magnam vel architecto doloremque suscipit, deserunt minima voluptatem vero. Minima unde pariatur ut. Reiciendis dicta fugit temporibus nobis beatae impedit incidunt quaerat placeat ab? </p>
+        <button id="btn"> <a href="#third-page">Next Page</a></button>
+        <button id="btn"> <a href="#first-page">Previous Page</a></button>
+    </div>
+    <div id="third-page" class="slide">
+        <h1>Welcome to Third Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse magni cupiditate sunt! Accusamus at animi natus similique tempora. Provident id vitae libero minima facilis eligendi harum ipsa deleniti et hic impedit culpa, ullam odio aliquam maiores deserunt blanditiis qui, adipisci nostrum accusamus sapiente esse inventore. Voluptate cumque, quam ad error cum aperiam fuga beatae harum maxime. Ratione repudiandae, non vel repellat maxime sapiente accusantium nemo vero officia! Id, tempora? Iste maiores, eius praesentium assumenda natus repudiandae nulla error odio iusto incidunt adipisci asperiores, similique distinctio architecto dignissimos expedita temporibus, dicta culpa? Deleniti animi magnam vel architecto doloremque suscipit, deserunt minima voluptatem vero. Minima unde pariatur ut. Reiciendis dicta fugit temporibus nobis beatae impedit incidunt quaerat placeat ab? </p>
+        <button id="btn"> <a href="#second-page">Previous Page</a></button>
+    </div>
+</body>
+</html>

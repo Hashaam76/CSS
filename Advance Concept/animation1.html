@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      body {
+        background: #333;
+        padding: 1rem;
+      }
+      div {
+        height: 100px;
+        width: 100px;
+        background: #fff;
+        position: relative;
+
+        /* animation-name: animate;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+
+         I skip this one in class. It basically tells in which direction our animation will perform
+
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out; */
+
+        /* Shorthand */
+        animation: animate 2s forwards 2s alternate ease-in-out;
+      }
+
+      @keyframes animate {
+        from {
+          top: 0;
+        }
+        to {
+          width: 600px;
+          background: red;
+          top: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    overflow: hidden;
+}
+#section1{
+    background-color: #333444;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.section1 h1{
+    color: bisque;
+    text-align: center;
+    padding: 10px;
+}
+.section1{
+    width: 80%;
+}
+.section1 p {
+    font-size: 15px;
+    text-align: center;
+    /* width: 80%; */
+    color: aqua;
+    padding: 15px;
+}
+.section1 button{
+    
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    margin-left: 45%;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+.section1 button:hover{
+    
+    background-color: #dac9c9;
+    
+}
+/* Section 2 */
+#section2{
+    background-color: #969ace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.section2 h1{
+    color: #333;
+    text-align: center;
+    padding: 10px;
+}
+.section2{
+    width: 80%;
+}
+.section2 p {
+    font-size: 15px;
+    text-align: center;
+    /* width: 80%; */
+    color: rgb(25, 61, 61);
+    padding: 15px;
+}
+.section2 .Nxtbtn{
+    
+    background-color: #333555;
+    padding: 10px;
+    text-align: center;
+    margin-left: 45%;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+.section2 .Prevbtn{
+    
+    background-color: #808296;
+    padding: 10px;
+    text-align: center;
+   
+    border-radius: 15px;
+    border: 1px solid black;
+}
+.section2 button:hover{
+    
+    background-color: #d6c2c2;
+    
+}
+/* Section 3 */
+#section3 {
+    background-color: #2a2b41;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.section3 h1{
+    color: #b6a6a6;
+    text-align: center;
+    padding: 10px;
+}
+.section3 {
+    width: 80%;
+}
+.section3 p {
+    font-size: 15px;
+    text-align: center;
+    /* width: 80%; */
+    color: rgb(55, 196, 196);
+    padding: 15px;
+}
+.section3 button{
+    
+    background-color: #333555;
+    padding: 10px;
+    text-align: center;
+    margin-left: 45%;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+.section3 button:hover{
+    
+    background-color: #d6c2c2;
+    
+}
