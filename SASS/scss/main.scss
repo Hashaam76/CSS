@@ -1,0 +1,19 @@
+@import 'variables';
+// @use "variables" as variable;
+
+body{
+    background-color: $primary-color;
+    font-family: $font-stack;
+}
+
+div{
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+    margin-left: 1rem;
+    background-color: $secondary-color;
+
+    h1{
+        color: aliceblue;
+    }
+}

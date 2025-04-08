@@ -1,0 +1,17 @@
+body {
+  background-color: #f478ad;
+  font-family: "Arial", sans-serif;
+}
+
+div {
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  background-color: #3377aa;
+}
+div h1 {
+  color: aliceblue;
+}
+
+/*# sourceMappingURL=main.css.map */
