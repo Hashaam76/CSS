@@ -1,0 +1,15 @@
+// Function to set color accordingly.
+@function set-text-color($color){
+    @if type-of($color) == 'color' {
+        @if lightness($color) > 50 {
+          @return #000;
+        } @else {
+          @return #fff;
+        }
+      }
+}
+
+@mixin transform($property){
+    --webkit-ms:$property;
+    transform: $property;
+}

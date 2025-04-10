@@ -1,17 +1,59 @@
 body {
-  background-color: #f478ad;
   font-family: "Arial", sans-serif;
 }
 
-div {
-  height: 5rem;
-  width: 5rem;
-  padding: 1rem;
-  margin-left: 1rem;
-  background-color: #3377aa;
+header {
+  background: #000;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
 }
-div h1 {
-  color: aliceblue;
+header h1 {
+  font-size: 4rem;
+}
+
+.section-a {
+  background: darkblue;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #fff;
+  border: 2px solid #3377aa;
+}
+.section-b {
+  background: #3377aa;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 2px solid darkblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-dark, .btn-light {
+  border: none;
+  padding: 1rem 2rem;
+  display: block;
+  cursor: pointer;
+  width: 5rem;
+  transition: background 0.5s ease;
+}
+
+.btn-light {
+  background: #fff;
+  color: #000;
+}
+.btn-light:hover {
+  --webkit-ms:$property;
+  transform: rotate(-15deg);
+}
+.btn-dark {
+  background: #000;
+  color: #fff;
+}
+.btn-dark:hover {
+  --webkit-ms:$property;
+  transform: rotate(15deg);
 }
 
 /*# sourceMappingURL=main.css.map */
