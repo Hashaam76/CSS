@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Breakpoints & Media Queries</title>
+  </head>
+  <!-- Tailwind Mobile Frist -->
+  <body
+    class="bg-purple-400 sm:bg-red-200 md:bg-green-300 lg:bg-pink-500 xl:bg-orange-300"
+  >
+    <h1 class="text-xl font-bold m-4 md:text-3xl lg:text-5xl xl:text-7xl"></h1>
+
+    <script>
+      function showBrowserWidth() {
+        const width = window.innerWidth;
+        document.querySelector("h1").innerText = `Width: ${width}`;
+      }
+
+      window.onload = showBrowserWidth;
+      window.onresize = showBrowserWidth;
+    </script>
+  </body>
+</html>
+
+<!-- Breakpoint Classes
+    sm	640px	  @media (min-width: 640px) { ... }
+    md	768px	  @media (min-width: 768px) { ... }
+    lg	1024px	@media (min-width: 1024px) { ... }
+    xl	1280px	@media (min-width: 1280px) { ... }
+    2xl	1536px	@media (min-width: 1536px) { ... }
+  -->

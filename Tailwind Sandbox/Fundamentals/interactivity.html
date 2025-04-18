@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Taiilwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Interactivity</title>
+  </head>
+  <body>
+    <!-- Hover State -->
+    <button
+      class="border-none bg-lime-200 m-6 px-5 py-3 rounded-lg hover:bg-rose-200"
+    >
+      Hashaam
+    </button>
+
+    <!-- Focus State Styling -->
+    <button
+      class="border-none bg-lime-200 m-6 px-5 py-3 rounded-lg focus:bg-rose-200"
+    >
+      Hashaam
+    </button>
+
+    <!-- active state styling -->
+    <button
+      class="border-none bg-lime-200 m-6 px-5 py-3 rounded-lg active:bg-rose-200"
+    >
+      Hashaam
+    </button>
+
+    <!-- Styling based on parent state -->
+    <!-- When you need to style an element based on the state of some parent element, mark the parent with the group class, and use group-* modifiers like group-hover to style the target element: -->
+    <a
+      href="#"
+      class="bg-red-300 group block max-w-xs mx-auto p-3 hover:bg-blue-400 rounded-lg shadow-lg text-center"
+    >
+      <h1 class="text-4xl font-bold">Heading</h1>
+      <p class="group-hover:text-white">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      </p>
+    </a>
+    <!-- <br /> -->
+    <a
+      href="#pg"
+      class="m-5 block rounded-lg bg-sky-700 text-white px-5 py-3 max-w-3xs mx-auto text-center hover:opacity-80"
+    >
+      Go to Paragraph</a
+    >
+
+    <!-- Pseudo CLasses -->
+    <ul class="m-7 space-y-3">
+      <li class="first:bg-blue-400 odd:bg-orange-300 even:bg-lime-200">
+        item1
+      </li>
+      <li class="first:bg-blue-400 odd:bg-orange-300 even:bg-lime-200">
+        item2
+      </li>
+      <li class="first:bg-blue-400 odd:bg-orange-300 even:bg-lime-200">
+        item3
+      </li>
+      <li class="first:bg-blue-400 odd:bg-orange-300 even:bg-lime-200">
+        item4
+      </li>
+      <li class="first:bg-blue-400 odd:bg-orange-300 even:bg-lime-200">
+        item5
+      </li>
+      <li class="first:bg-blue-400 odd:bg-orange-300 even:bg-lime-200">
+        item6
+      </li>
+    </ul>
+
+    <!-- Appearance -->
+    <!-- Use appearance-none to reset any browser specific styling on an element. This utility is often used when creating custom form components. -->
+    <select>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+    <select class="appearance-none bg-indigo-100 mx-7">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <!-- cursor -->
+    <div class="flex space-x-6">
+      <button
+        type="submit"
+        class="border-none bg-lime-200 m-6 px-5 py-3 rounded-lg hover:bg-rose-200 cursor-pointer"
+      >
+        Submit
+      </button>
+      <button
+        type="submit"
+        class="border-none bg-lime-200 m-6 px-5 py-3 rounded-lg hover:bg-rose-200 cursor-wait text-blue-500"
+      >
+        Loading ...
+      </button>
+      <button
+        type="submit"
+        class="border-none bg-lime-200 m-6 px-5 py-3 rounded-lg hover:bg-rose-200 cursor-not-allowed text-red-500"
+      >
+        Confirm
+      </button>
+    </div>
+
+    <!-- Resize -->
+    <textarea class="border border-black rounded resize"></textarea>
+
+    <!-- User Select -->
+    <div class="select-none">
+      Lorem ipsum dolor sit amet consectetur adipisicing.
+    </div>
+    <div class="select-all">
+      Lorem ipsum dolor sit amet consectetur adipisicing.
+    </div>
+    <div class="select-auto">
+      Lorem ipsum dolor sit amet consectetur adipisicing.
+    </div>
+    <div class="select-text">
+      Lorem ipsum dolor sit amet consectetur adipisicing.
+    </div>
+
+    <!-- Smooth Scroll -->
+    <p id="pg" class="mt-2 bg-purple-500 px-4 py-2">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis nobis ex
+      totam magnam blanditiis quibusdam maiores hic aspernatur enim distinctio
+      incidunt harum veritatis, repudiandae officia iste consequatur minima cum
+      eius inventore id maxime. Corporis corrupti aperiam inventore aliquam,
+      rerum laboriosam quam repellendus dolores architecto in harum aut
+      voluptates ipsum? Neque quidem quaerat rem vitae consequatur accusamus
+      voluptatem magnam officiis incidunt quam? Amet necessitatibus vero sequi
+      ad modi enim ratione fugit totam laborum delectus tempore culpa ab dolor,
+      doloribus laudantium obcaecati dolorem alias dolore pariatur! Dolorem sed
+      aliquid iure illum tempora labore, vero repellendus, iusto dicta optio
+      beatae amet ducimus eos!
+    </p>
+  </body>
+</html>
+
+<!-- Cursor
+  cursor-auto	          cursor: auto;
+  cursor-default	      cursor: default;
+  cursor-pointer	      cursor: pointer;
+  cursor-wait	          cursor: wait;
+  cursor-text	          cursor: text;
+  cursor-move	          cursor: move;
+  cursor-help	          cursor: help;
+  cursor-not-allowed	  cursor: not-allowed;
+  cursor-none	          cursor: none;
+  cursor-context-menu	  cursor: context-menu;
+  cursor-progress	      cursor: progress;
+  cursor-cell	          cursor: cell;
+  cursor-crosshair	    cursor: crosshair;
+  cursor-vertical-text	cursor: vertical-text;
+  cursor-alias	        cursor: alias;
+  cursor-copy	          cursor: copy;
+  cursor-no-drop	      cursor: no-drop;
+  cursor-grab	          cursor: grab;
+  cursor-grabbing	      cursor: grabbing;
+  cursor-all-scroll	    cursor: all-scroll;
+  cursor-col-resize	    cursor: col-resize;
+  cursor-row-resize	    cursor: row-resize;
+  cursor-n-resize	      cursor: n-resize;
+  cursor-e-resize	      cursor: e-resize;
+  cursor-s-resize	      cursor: s-resize;
+  cursor-w-resize	      cursor: w-resize;
+  cursor-ne-resize	    cursor: ne-resize;
+  cursor-nw-resize	    cursor: nw-resize;
+  cursor-se-resize	    cursor: se-resize;
+  cursor-sw-resize	    cursor: sw-resize;
+  cursor-ew-resize	    cursor: ew-resize;
+  cursor-ns-resize	    cursor: ns-resize;
+  cursor-nesw-resize	  cursor: nesw-resize;
+  cursor-nwse-resize	  cursor: nwse-resize;
+  cursor-zoom-in	      cursor: zoom-in;
+  cursor-zoom-out	      cursor: zoom-out;
+-->

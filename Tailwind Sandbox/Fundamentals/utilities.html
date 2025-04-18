@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>utilities</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        padding-top: 200px;
+        box-sizing: border-box;
+      }
+
+      .box {
+        border-radius: 0.5rem;
+        display: flex;
+        max-width: 24rem;
+        margin: 0 auto;
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        /* overflow: hidden; */
+      }
+
+      .alert-wrap {
+        flex-shrink: 0;
+      }
+      /* Image SVG */
+      .alert {
+        height: 4rem;
+        width: 4rem;
+      }
+
+      /* Text Area */
+      .alert-body {
+        margin-left: 1.5rem;
+        padding-bottom: 0.25rem;
+      }
+      .alert-title {
+        color: #1a202c;
+        font-size: 1.25rem;
+        line-height: 1.25;
+        font-weight: 500;
+      }
+      .alert-message {
+        color: #718096;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="alert-wrap">
+        <img src="./Images/warning-icon.svg" alt="warning" class="alert" />
+      </div>
+      <div class="alert-body">
+        <h2 class="alert-title">Are You Sure?</h2>
+        <p class="alert-message">You are about to delete a post</p>
+      </div>
+    </div>
+    <br />
+    <br />
+    <!-- Tailwind Version -->
+    <div
+      class="flex items-center max-w-sm mx-auto p-6 rounded-xl shadow-xl bg-white mt-8 space-x-8"
+    >
+      <img
+        src="./Images/warning-icon.svg"
+        alt="warning sign"
+        class="h-16 w-15"
+      />
+      <div>
+        <div class="text-black font-medium text-xl">Are You Sure?</div>
+        <div class="text-slate-500">You are about to delete a post</div>
+      </div>
+    </div>
+  </body>
+</html>
