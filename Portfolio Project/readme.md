@@ -86,8 +86,6 @@ new TypeWriter(txtElement, words, wait);
 
 <!-- Use Javascript and apply like this -->
 
-<span
-              class="txt-type"
-              data-wait="1500"
-              data-words='["Photographer", "Designer", "UI/UX Dev"]'
-            ></span>
+class="txt-type"
+data-wait="1500"
+data-words='["Photographer", "Designer", "UI/UX Dev"]'
