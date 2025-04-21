@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/test/dist/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="h-full w-full flex p-5 bg-green-200 items-center justify-between"
+      >
+        <div class="h-8 w-4 flex-none md:flex-1 text-2xl font-bold">LOGO</div>
+        <div class="hidden md:flex items-center justify-center">
+          <div class="p-3 hover:bg-red-200">Home</div>
+          <div class="p-3 hover:bg-red-200">About</div>
+          <div class="p-3 hover:bg-red-200">Contact</div>
+        </div>
+
+        <!-- Hamburger -->
+        <button id="menu-btn" type="submit" class="hamburger flex md:hidden">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </nav>
+
+      <!-- Menu fo hamburger -->
+      <div
+        id="menu"
+        class="hidden absolute w-full flex-col items-center p-20 justify-center bg-slate-800 text-white z-100 space-y-6 md:hidden"
+      >
+        <div class="p-3 hover:text-red-200"><a href="#">Home</a></div>
+        <div class="p-3 hover:text-red-200">About</div>
+        <div class="p-3 hover:text-red-200">Contact</div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex max-w-full flex-col-reverse md:flex-row">
+      <div class="w-120 p-10">
+        <h1 class="font-bold text-5xl">More than just shorter links</h1>
+        <p class="mt-10 text-gray-400 text-2xl">
+          Build your brand's recognition and get detailed insights on how your
+          links are performing.
+        </p>
+        <button class="bg-green-300 rounded-3xl mt-10 p-3 px-10 text-white">
+          Get Started
+        </button>
+      </div>
+      <div class="w-[420px] md:w-1/2 m-10">
+        <img src="./css/illustration-working.svg" alt="" />
+      </div>
+    </main>
+
+    <script src="./javascript/index.js"></script>
+  </body>
+</html>
