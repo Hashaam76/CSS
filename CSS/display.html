@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px;
+      }
+      .header ul {
+        list-style: none;
+        display: flex;
+      }
+      .header ul li a {
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        padding: 5px 8px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .header ul li a:hover {
+        background: lightblue;
+      }
+      div {
+        margin: 10px auto;
+        max-width: 800px;
+        padding: 10px;
+        background-color: lightslategray;
+      }
+      div p {
+        color: white;
+      }
+      div p,
+      div h2 {
+        display: inline;
+      }
+      span {
+        font-size: 20px;
+        font-weight: bold;
+        color: aqua;
+        display: inline-block;
+      }
+      .btn {
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
+        background: red;
+        border: 2px solid rgb(255, 34, 15);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px black;
+        padding: 3px 5px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        color: white;
+      }
+      .btn:hover {
+        background: white;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>My Logo</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Service</a></li>
+      </ul>
+    </header>
+    <h1>We are learning Display Properties</h1>
+    <div>
+      <h2>Heading</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, rem?
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus,
+        maiores.
+      </p>
+    </div>
+    <div>
+      <h2>Heading</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, rem?
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus,
+        maiores.
+      </p>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+      accusantium <span>recusandae aliquam non, </span>consequatur iste quia
+      harum fugit, suscipit placeat consequuntur sint deleniti ipsam ducimus
+      ratione veniam, magni vel! Perspiciatis.
+    </p>
+
+    <button type="submit" class="btn">Submit</button>
+    <a href="#" class="btn">Submit</a>
+  </body>
+</html>
