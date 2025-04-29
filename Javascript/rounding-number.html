@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rounding Values</title>
+  </head>
+  <body>
+    <script>
+      // Round Numbers
+      var num = 2.00044566;
+      document.write(Math.round(num) + "<br>");
+      document.write(Math.floor(13.968989) + "<br>");
+      document.write(Math.ceil(num) + "<br>");
+
+      //   Random Numbers
+      var randNum = Math.random();
+      let newNum = randNum * 6 + 1;
+
+      for (let i = 0; i < 12; i++) {
+        let genNum = randNum * i;
+        document.write(genNum.toFixed(3) + "<br>");
+      }
+      document.write(newNum.toString() + 12 + "<br>");
+
+      //   Convert string into number
+      var strNum = "50.98655";
+      let nbr = Number(strNum);
+
+      document.write(nbr + 12);
+    </script>
+  </body>
+</html>

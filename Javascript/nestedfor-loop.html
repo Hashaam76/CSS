@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested For Loop</title>
+  </head>
+  <body>
+    <script>
+      // Even Numbers
+      for (var i = 0; i <= 20; i++) {
+        // document.write(i + "<br>");
+        if (i % 2 == 0) {
+          document.write(i + "<br>");
+        }
+      }
+
+      //   Nested For Loop upper case & lower case
+      var firstName = ["Usama", "Ahmad", "Urooj"]; //n .... n-1
+      var lastName = ["Malik", "Jutt", "Gull"];
+      var fullName = [];
+
+      for (var i = 0; i < firstName.length; i++) {
+        for (var j = 0; j < lastName.length; j++) {
+          fullName.push(
+            firstName[i].toUpperCase() + " " + lastName[j].toLowerCase()
+          );
+        }
+      }
+
+      document.write(fullName.length + "<br>");
+      document.write(fullName[6] + "<br>");
+
+      //   Slice Method
+      var name = "hamZA";
+      var firstChar = name.slice(0, 1).toUpperCase();
+      var otherChar = name.slice(1).toLowerCase();
+      name = firstChar + otherChar;
+
+      document.write(name + "<br>");
+
+      //   Month Name only first 3 character
+      var month = "March";
+      var charInMonth = month.length;
+      if (charInMonth > 3) {
+        var monthFirstChar = month.slice(0, 1).toUpperCase();
+        var monthOtherChar = month.slice(1, 3).toLowerCase();
+      } else {
+        var monthFirstChar = month.slice(0, 1).toUpperCase();
+        var monthOtherChar = month.slice(1, 3).toLowerCase();
+      }
+      document.write(monthFirstChar + monthOtherChar + "<br>");
+
+      // Replacing text using slice Method
+
+      var text = "my name is Hashaam";
+
+      for (var i = 0; i < text.length; i++) {
+        if (text.slice(i, i + 7) === "Hashaam") {
+          text =
+            text.slice(0, i) + "Muhammad Hashaam Aamir" + text.slice(i + 7);
+          break;
+        }
+      }
+      document.write(text + "<br>");
+
+      // Change on Position
+      var nameCheck = "Tevta";
+      document.write(nameCheck.charAt(0) + " ");
+      var cappedLastChar = nameCheck.charAt(nameCheck.length - 1).toUpperCase();
+      document.write(cappedLastChar + "<br>");
+
+      // IndexOf
+      var nameIndex = "University of Tech";
+      var j = nameIndex.indexOf("University");
+      if (j !== -1) {
+        nameIndex =
+          nameIndex.slice(0, j) + "The College" + nameIndex.slice(j + 10);
+      }
+      document.write(nameIndex + "<br>");
+
+      var textData =
+        "I survived in World War II. In World War II, many peoples were killed.";
+      newTextData = textData.replace(/World War II/g, "the Second World War");
+      document.write(textData + "<br>");
+      document.write(newTextData);
+
+      // var let const
+    </script>
+  </body>
+</html>
