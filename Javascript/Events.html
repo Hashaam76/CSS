@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <style>
+    .btn {
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      margin: 1rem;
+      color: white;
+      background: coral;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <!-- Event Links -->
+    <a href="#" class="btn" onClick="sumNumbers(10,5)">Click Me</a>
+    <a href="#" class="btn" onClick="alert('Enter Any number!')">Click Me</a>
+
+    <!-- Event Mouse -->
+    <script>
+      //    Events Link Function
+      function sumNumbers(num1, num2) {
+        let sum;
+        sum = num1 + num2;
+        alert("Sum of " + num1 + " and " + num2 + " = " + sum);
+      }
+    </script>
+  </body>
+</html>

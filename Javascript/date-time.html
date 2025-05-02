@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date & Time</title>
+  </head>
+  <body>
+    <script>
+      // Date & Time
+      var date = new Date();
+
+      console.log(date);
+
+      time = date.getTime();
+      let lastDate = new Date("June 26, 2025");
+      lastTime = lastDate.getTime();
+
+      let final = (lastTime - time) / (1000 * 60 * 60 * 24);
+      console.log(time);
+      console.log(Math.floor(final));
+      console.log(date.getFullYear());
+      console.log(date.getMonth());
+
+      //   Functions
+      function sum() {
+        let sum = 0;
+        sum = 4 + 8;
+        console.log("Sum of 4 and 8 is " + sum);
+      }
+
+      sum();
+
+      function multiply(num1, num2) {
+        let mul;
+        mul = num1 * number2;
+
+        return mul;
+      }
+
+      let num1 = 10;
+      let number2 = 5;
+
+      let multiplyNums = multiply(num1, number2);
+
+      console.log(multiplyNums);
+
+      function weekDay(day) {
+        switch (day) {
+          case 0:
+            return "Today is Sunday";
+            break;
+          case 1:
+            return "Today is Monday";
+            break;
+          case 2:
+            return "Today is Tuesday";
+            break;
+          case 3:
+            return "Today is Wednesday";
+            break;
+          case 4:
+            return "Today is Thursday";
+            break;
+          case 5:
+            return "Today is Friday";
+            break;
+          case 6:
+            return "Today is Saturday";
+            break;
+          default:
+            return "Invalid input";
+        }
+      }
+
+      let checkWeekDay = weekDay(7);
+      console.log(checkWeekDay);
+
+      //   for of
+      var nums = [1, 2, 4, 6, 4];
+
+      for (let i of nums) {
+        console.log(i);
+      }
+
+      //   For in loop
+      for (let i in nums) {
+        console.log(i + ": " + nums[i]);
+      }
+
+      var stdData = {
+        firstname: "Hashaam",
+        lastname: "Aamir",
+        age: 25,
+      };
+
+      for (let i in stdData) {
+        console.log(i + ": " + stdData[i]);
+      }
+
+      //  While loop
+      let i = 0;
+      while (i < 5) {
+        console.log(nums[i]);
+        i++;
+      }
+
+      let j = 0;
+      do {
+        console.log(nums[j]);
+        j++;
+      } while (j < 5);
+    </script>
+  </body>
+</html>
