@@ -13,20 +13,148 @@
       color: white;
       background: coral;
       cursor: pointer;
+      border: none;
+      font-size: 1.2rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    img {
+      margin: 3rem 0;
+      height: 500px;
+      width: 700px;
+      display: block;
+    }
+    .hover {
+      height: 100px;
+      width: 100px;
+      border-radius: 100%;
+    }
+    label,
+    input,
+    textarea {
+      display: block;
+      box-sizing: border-box;
+    }
+    input {
+      padding: 0.5rem;
+      margin: 0.35rem 0;
+      width: 100%;
+    }
+    .helper {
+      color: #777;
+      font-size: small;
+      display: none;
     }
   </style>
   <body>
     <!-- Event Links -->
+    <h1
+      onmouseOver="this.style.color = 'Green'; this.style.fontSize = '5rem'"
+      onmouseOut="this.style.color = 'black'; this.style.fontSize = '2rem'"
+    >
+      Event: Mouse
+    </h1>
     <a href="#" class="btn" onClick="sumNumbers(10,5)">Click Me</a>
     <a href="#" class="btn" onClick="alert('Enter Any number!')">Click Me</a>
+    <a
+      href="#"
+      class="btn"
+      onClick="event.preventDefault() ;alert('Enter Any number!')"
+      >Click Me</a
+    >
+
+    <button class="btn" onclick="sumNumbers(12,98)">Submit</button>
+    <button class="btn" onclick="alert('Invalid Input!')">Submit</button>
+
+    <img src="./Bird.jpg" alt="Bird" onclick="counting()" />
 
     <!-- Event Mouse -->
+
+    <a
+      href="#"
+      class="btn"
+      onClick="event.preventDefault()"
+      onMouseOver="this.style.background = 'blue'; this.style.border = '2px solid red'"
+      onmouseout="this.style.background ='coral'; this.style.border = 'none'"
+      >Hover Effect</a
+    >
+
+    <img
+      class="hover"
+      src="./House-in-Jungle.jpg"
+      alt="House-in-Jungle"
+      onmouseover="this.src = './Bird.jpg'"
+      onmouseout="this.src = './House-in-Jungle.jpg'"
+    />
+
+    <!-- Event Field -->
+    <form action="action.php" onSubmit="">
+      <input type="text" onfocus="this.style.padding = '1rem'" />
+      <input
+        type="text"
+        onfocus="this.style.border = '4px solid blue'"
+        onblur="this.style.border = '1px solid black'"
+      />
+      <label for="address">Address</label>
+      <textarea
+        name="address"
+        id="address"
+        onfocus="showHelper()"
+        onblur="hideHelper()"
+      ></textarea>
+      <p id="helperText" class="helper">
+        Enter your address according to your CNIC
+      </p>
+      <label for="zip">Zip Code</label>
+      <input type="text" id="zip" onblur="autofillCity()" />
+      <input type="text" id="city" readonly />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Javascipt -->
     <script>
       //    Events Link Function
       function sumNumbers(num1, num2) {
         let sum;
         sum = num1 + num2;
         alert("Sum of " + num1 + " and " + num2 + " = " + sum);
+      }
+
+      // counting 1 to 10
+      function counting() {
+        for (let i = 1; i <= 10; i++) {
+          console.log(i);
+        }
+      }
+
+      // Autofill the city name
+      function autofillCity() {
+        const zipCode = document.getElementById("zip").value.trim();
+        let cityName = "";
+        switch (zipCode) {
+          case "38000":
+            cityName = "Faisalabad";
+            break;
+          case "42000":
+            cityName = "Lahore";
+            break;
+          case "36000":
+            cityName = "Multan";
+            break;
+          default:
+            alert("Inavlid input!");
+            break;
+        }
+        document.getElementById("city").value = cityName;
+      }
+
+      // helping text
+      function showHelper() {
+        const txt = document.getElementById("helperText");
+        txt.style.display = "inline-block";
+      }
+      function hideHelper() {
+        const txt = (document.getElementById("helperText").style.display =
+          "none");
       }
     </script>
   </body>

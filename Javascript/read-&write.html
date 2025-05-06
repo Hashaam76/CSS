@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InnerHTML</title>
+    <style>
+      div {
+        max-width: 500px;
+        background: #5a789f;
+        padding: 1rem;
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 1rem;
+      }
+      a {
+        text-decoration: none;
+        padding: 0.25rem 1rem;
+        background: lightgreen;
+        color: white;
+      }
+      .paragraph {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 1.2rem;
+      }
+      .helpingText {
+        font-size: small;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p id="text" class="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        molestiae beatae odio. Vel deserunt neque nisi sed enim eum perspiciatis
+        rem? Rem nam rerum est cupiditate unde repudiandae praesentium quasi,
+        officia vero natus dignissimos aspernatur similique repellat doloribus
+        reiciendis. Numquam.
+      </p>
+      <a href="#" id="readBtn" onclick="expandText()">Read More</a>
+    </div>
+
+    <div id="div2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt in suscipit
+      quas? A omnis pariatur veritatis adipisci illo! Distinctio hic consequatur
+      quasi, eum perspiciatis voluptas consequuntur. Officia fuga dolores eaque.
+    </div>
+
+    <div id="div3" class="text helping">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt in suscipit
+      quas? A omnis pariatur veritatis adipisci illo! Distinctio hic consequatur
+      quasi, eum perspiciatis voluptas consequuntur. Officia fuga dolores eaque.
+    </div>
+
+    <div id="div4" class="text helping">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt in suscipit
+      quas? A omnis pariatur veritatis adipisci illo! Distinctio hic consequatur
+      quasi, eum perspiciatis voluptas consequuntur. Officia fuga dolores eaque.
+    </div>
+
+    <!-- Javascript -->
+    <script>
+      // function for expand
+      const para = document.getElementById("text");
+      const btn = document.getElementById("readBtn");
+      let isExpanded = false;
+
+      function expandText() {
+        if (!isExpanded) {
+          let expand =
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati molestiae beatae odio. Vel deserunt neque nisi sed enim eum perspiciatis rem? Rem nam rerum est cupiditate unde repudiandae praesentium quasi, officia vero natus dignissimos aspernatur similique repellat doloribus reiciendis. Numquam.";
+
+          para.innerHTML += expand;
+          para.style.webkitLineClamp = "unset";
+          btn.innerHTML = "Read Less";
+          isExpanded = true;
+        } else {
+          let expand =
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati molestiae beatae odio. Vel deserunt neque nisi sed enim eum perspiciatis rem? Rem nam rerum est cupiditate unde repudiandae praesentium quasi, officia vero natus dignissimos aspernatur similique repellat doloribus reiciendis. Numquam.";
+
+          para.innerHTML = expand;
+          para.style.webkitLineClamp = "3";
+          btn.innerHTML = "Read More";
+          isExpanded = false;
+        }
+      }
+
+      //   changing text into other elements
+      const divElement = document.getElementById("div2");
+
+      divElement.innerHTML =
+        "<table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>Ali</td></tr></tbody></table>";
+
+      document.getElementById("div3").className = "helpingText";
+      document.getElementById("div4").classList.add("helpingText");
+    </script>
+  </body>
+</html>
