@@ -59,7 +59,15 @@
         const ul = document.getElementById("unorderList");
         ul.appendChild(li);
 
-        const removBtn = function () {};
+        const removBtn = document.createElement("button");
+        li.appendChild(removBtn);
+        removBtn.className = "btn";
+        removBtn.textContent = "Remove";
+        removBtn.id = "removebtn";
+        removBtn.onclick = function () {
+          ul.removeChild(li);
+        };
+
         input.value = "";
       }
     </script>
