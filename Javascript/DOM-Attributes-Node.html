@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Attributes</title>
+    <style>
+      .btn {
+        text-decoration: none;
+        color: #333;
+        background-color: #8ac67f;
+        padding: 0.25rem 0.75rem;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 onmouseover="this.style.background = '#f6ac89'">I have attributes</h1>
+
+    <input type="text" id="inputText" />
+    <a href="#" class="btn" id="addBtn" onClick="addToDo()">Add in List</a>
+    <ul id="unorderList"></ul>
+    <!-- Javascript -->
+    <script>
+      // Setting an attribute
+      const setAttr = document.getElementsByTagName("h1");
+      setAttr[0].setAttribute("id", "main-heading");
+
+      //   Access all attributes
+      const heading = document.getElementById("main-heading");
+      const attributes = heading.attributes;
+      const array = Array.from(attributes);
+
+      //   Check attribute and add a new one to reset
+      for (let attribute of attributes) {
+        if (attribute.nodeName === "onmouseover") {
+          heading.setAttribute("onmouseout", "this.style.background = 'white'");
+        }
+      }
+
+      //   Creating a new node
+      const heading2 = document.createElement("h2");
+      const headingText = document.createTextNode(
+        "I am heading created by using Javascript."
+      );
+      heading2.appendChild(headingText);
+      document.body.insertBefore(heading2, heading);
+
+      //   Creating a list node
+
+      function addToDo() {
+        const input = document.getElementById("inputText");
+        const inputValue = input.value.trim();
+        const li = document.createElement("li");
+        li.textContent = inputValue;
+
+        if (inputValue === "") return;
+
+        const ul = document.getElementById("unorderList");
+        ul.appendChild(li);
+
+        const removBtn = function () {};
+        input.value = "";
+      }
+    </script>
+  </body>
+</html>

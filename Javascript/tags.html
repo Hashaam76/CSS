@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing Tags</title>
+    <style>
+      .newClass {
+        height: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <p>My name is Hashaam</p>
+      <p>This is Javascript Class</p>
+      <p>Many students are absent today</p>
+    </div>
+    <p>Outside the div</p>
+
+    <!-- DOM childNodes -->
+    <div id="box2">
+      <p>Here we start Dom</p>
+      <p>2nd child node</p>
+    </div>
+
+    <!-- Tables -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hashaam</td>
+          <td>03017188018</td>
+          <td>Navttc</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      const div = document.getElementById("box");
+      const tags = div.getElementsByTagName("p");
+      tags[0].innerHTML = "This is Mern Stack";
+
+      for (let i = 0; i < tags.length; i++) {
+        tags[i].style.background = "blue";
+        tags[i].style.color = "white";
+      }
+
+      //   accessing inner node through childNode
+      const div2 = document.getElementById("box2");
+      let pcounter = 0;
+      console.log(div2.childNodes[0].nodeType);
+      console.log(div2.nodeType);
+
+      for (let i = 0; i < div2.childNodes.length; i++) {
+        if (div2.childNodes[i].nodeType === 1) {
+          pcounter++;
+        }
+        if (pcounter === 2) {
+          div2.childNodes[i].innerHTML = "This is what we do";
+          break;
+        }
+      }
+
+      // accessing table and table data
+      const tableRow = document.getElementsByTagName("tr");
+      const tableArray = Array.from(tableRow);
+
+      // changing border and background
+      for (let i = 0; i < tableArray.length; i++) {
+        const children = tableArray[i].childNodes;
+        for (let j = 0; j < children.length; j++) {
+          if (children[j].nodeName === "TH") {
+            children[j].style.border = "2px solid red";
+            children[j].style.background = "#4c81af";
+          }
+
+          if (children[j].nodeName.toLowerCase() === "td") {
+            children[j].style.border = "2px solid black";
+            children[j].style.background = "#4ca9af";
+          }
+        }
+      }
+
+      const tableBody = document.getElementsByTagName("tbody");
+      tableBody[0].setAttribute("class", "newClass");
+
+      const div3 = document.getElementsByTagName("div");
+      console.log(div3[0].getAttribute("id"));
+      console.log(div2.firstElementChild.nodeName);
+      console.log(div2.firstElementChild.nodeValue);
+      console.log(tags[0].innerHTML);
+      console.log(tags);
+      console.log(tableRow);
+      console.log(tableArray);
+    </script>
+  </body>
+</html>
