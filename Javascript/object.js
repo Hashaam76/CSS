@@ -34,6 +34,7 @@ console.log(screen.body)
 console.log(screen2.type)
 console.log(screen2.calcPrice(0.10));
 
+// Constructor with its method
 function screen(size,body,type,price){
     this.size = size;
     this.body = body;
@@ -47,4 +48,5 @@ function screen(size,body,type,price){
 }
 
 const screen3 = new screen('18inch', 'Metal', 'LCD', 18000)
+console.log(screen3);
 console.log(`I have bought ${screen3.type} of size ${screen3.size} in just ${screen3.calcPrice(0.2)}Rs.`);
