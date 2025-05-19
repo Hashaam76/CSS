@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Javascript -->
+    <script>
+      // var score = parseInt(prompt("Enter your score", score));
+      // if (score >= 90 && score <= 100) {
+      //   if (score >= 90 && score <= 95) {
+      //     alert("your Grade is A");
+      //   } else {
+      //     alert("your grade is A+");
+      //   }
+      // } else if (score >= 80 && score < 90) {
+      //   alert("your grade is B");
+      // } else if (score >= 70 && score < 80) {
+      //   alert("your grade is c");
+      // } else {
+      //   alert("your grade is F");
+      // }
+
+      // Changing string into number
+      const data = "30";
+      let x;
+      x = +data;
+
+      const n = 278613489389274n;
+
+      x = n;
+
+      const symbol = Symbol("id");
+
+      x = symbol;
+
+      const y = [1, 2, 4, 5, 5, 6];
+      y.push(3);
+
+      x = 30 + data;
+      x = +data + 30;
+
+      // Type Coercion
+      x = 5 + true;
+      x = 5 + false;
+      x = 5 + null;
+      x = 5 + undefined;
+
+      // Date and time API format
+      const date = new Date();
+
+      x = Intl.DateTimeFormat("ur-PK", {
+        month: "short",
+        weekday: "short",
+        day: "numeric",
+        timeZoneName: "long",
+      }).format(date);
+
+      // Convert using string method
+      x = date.toLocaleString("ur-PK", { month: "short" });
+      x = console.log(x);
+
+      // Arrays
+      const arr = [1, 2, 3, 4, 5];
+      const arr1 = [5, 7, 8, 0];
+
+      // arr.push(arr1);
+      x = arr.includes(5);
+
+      // Using concat method
+      const arr2 = [arr, arr1];
+      const arr3 = arr.concat(arr1);
+
+      // Using spread operator
+      const arr4 = [...arr, ...arr1];
+
+      // Using flat method
+      arr.push(arr1);
+      const arr5 = arr.flat();
+      x = arr5;
+
+      // Destructuring of an Array
+      const [first, second, third, ...remainValues] = arr5;
+
+      // Create array using Array constructor
+      const arr6 = new Array();
+      arr6.push(arr1);
+
+      console.log(arr6);
+
+      // Objects
+      const person = new Object();
+      person.name = "Hashaam";
+
+      x = person.name;
+
+      const user = {
+        id: 1,
+        name: "Subhan",
+        address: {
+          city: "Faisalabad",
+          street: "street no. 3",
+        },
+      };
+
+      // Concat objects using spread operators
+      x = { ...person, ...user };
+
+      x = user.address.street;
+
+      const obj = { a: 1, b: 2 };
+      const obj1 = { c: 1, d: 2 };
+
+      x = Object.assign({}, obj, obj1);
+
+      const users = [
+        {
+          id: 1,
+          name: "Subhan",
+          address: {
+            city: "Faisalabad",
+            street: "street no. 3",
+          },
+        },
+        {
+          id: 2,
+          name: "Faiza",
+          address: {
+            city: "Faisalabad",
+            street: "street no. 3",
+          },
+        },
+      ];
+
+      // delete users[1].name;  to delete any property
+
+      x = Object.keys(users[0]);
+      x = Object.values(users[0]);
+      x = Object.entries(users[0]);
+      x = users[0].hasOwnProperty("name");
+
+      const fullName = "Ali Hassan";
+      const city = "Faisalabad";
+      const age = 28;
+
+      // Naming the object
+      const person1 = {
+        fullName,
+        city,
+        age,
+      };
+      x = person1;
+
+      const {
+        id: userID,
+        name,
+        address: { street },
+      } = user;
+
+      x = JSON.stringify(user);
+
+      x = JSON.parse(x);
+      console.log(x);
+    </script>
+  </body>
+</html>
