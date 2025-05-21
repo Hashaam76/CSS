@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <h1>Arrow Functions</h1>
+
+    <!-- Internal javascript -->
+    <script>
+      // Function declaration
+      function sum(num1) {
+        let sum = 0;
+        sum = sum + num1;
+
+        console.log(sum);
+      }
+
+      //   Function expression
+      const sumNum = function (num1, num2) {
+        let sum;
+        sum = num1 + num2;
+        return sum;
+      };
+      sum(8);
+      console.log(sumNum(5, 9));
+
+      //   Arrow functions
+      const subtract = (n1, n2) => {
+        console.log(n1 - n2);
+      };
+
+      //   implicit return
+      const double = (n) => console.log(n * 2);
+
+      //   returning an object
+      const createObj = () => ({
+        id: 10,
+        name: "Ahmad",
+      });
+
+      //   function createObj() {
+      //     const id = 10;
+      //     const name = "Ahmad";
+
+      //     return {
+      //       id,
+      //       name,
+      //     };
+      //   }
+
+      subtract(5, 2);
+      double(7);
+      console.log(createObj());
+
+      const user = "Usama";
+
+      console.log(user);
+    </script>
+
+    <!-- Javascript from external file -->
+    <script src="./arrow-function.js"></script>
+  </body>
+</html>
