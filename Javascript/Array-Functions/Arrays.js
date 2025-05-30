@@ -40,10 +40,4 @@ heading.parentElement.style.padding = '1rem 1.5rem';
 
 // div.innerHTML = '<h2>Array Loop</h2>';
 
-console.log(heading)
-
-
-
-
-
-
+console.log(heading);
